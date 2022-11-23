@@ -39,7 +39,7 @@ Dynamo gives an indication of the state of the execution of your Visual Program 
 
 Hovering or right-clicking over the Name or Ports presents additional information and options.
 
-![](../.gitbook/assets/nodesandwires-nodestates.png)
+![](images/nodesandwires-nodestates.jpg)
 
 > 1. Satisfied inputs - A node with blue vertical bars over its input ports is well-connected and has all of its inputs successfully connected.
 > 2. Unsatisfied inputs – A node with a red vertical bar over one or more input ports needs to have those inputs connected.
@@ -91,7 +91,7 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 * Change connection to an input Port, left-click on another input Port
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+![](images/nodesandwires-editwirechangeport.gif)
 
 * To remove the Wire, pull the Wire away and left-click on Workspace
 
@@ -120,7 +120,7 @@ In case you prefer to hide the Wires in your graph, you can find this option fro
 
 With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
 
-![](images/nodesandwires-hidewiressetting(1).gif)
+![](images/nodesandwires-hidewiressetting.gif)
 
 #### Hide Individual Wire Only
 

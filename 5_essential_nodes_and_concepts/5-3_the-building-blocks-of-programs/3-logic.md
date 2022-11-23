@@ -36,7 +36,7 @@ Again, the Nodes are working identically. If the _boolean_ is changed to _false_
 
 ### Part I: Filtering a List
 
-1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+1\. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
 
 ![](../images/5-3/3/logic-exercisepartI-01.jpg)
 

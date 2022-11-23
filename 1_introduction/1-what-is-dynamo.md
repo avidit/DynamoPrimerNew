@@ -22,4 +22,4 @@ Nodes and Wires are the key components in Dynamo to support a [visual programmin
 
 From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Follow the Dynamo in Action board on Pinterest.](https://www.pinterest.com/modelabnyc/dynamo-in-action/)

@@ -60,7 +60,7 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates.jpg)
 
 * `category.nodeName`
 

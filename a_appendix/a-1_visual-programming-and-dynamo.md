@@ -44,7 +44,7 @@ The key to and first hurdle we will find in Programming, is that we have to rely
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
+{% file src="images/assets/Visual Programming - Circle Through Point.dyn" %}
 
 If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
 
@@ -52,7 +52,7 @@ If your answer contained graphics, then **Visual Programming** is definitely for
 
 **Visual Program:**
 
-![](./images/a-1/visualProgramming(2).png)
+![](images/a-1/visualProgramming(2).png)
 
 **Textual Program:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 The results of our algorithm:
 
-![](./images/a-1/visualProgramming(1).png)
+![](images/a-1/visualProgramming(1).png)
 
 The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.

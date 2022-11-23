@@ -4,7 +4,7 @@
 
 ### What is Curve?
 
-[Curves ](5-4\_curves.md#curve)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
+[Curves](5-4\_curves.md#curve) are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
 
 ![Curve Types](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,7 +18,7 @@
 
 ### Line
 
-[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg) to create a Line in Dynamo.
+[Line](5-4\_curves.md#lines) is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg) to create a Line in Dynamo.
 
 ![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
 

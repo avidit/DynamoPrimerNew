@@ -4,4 +4,4 @@ In this section, you can find additional resources for taking your Dynamo game o
 
 &#x20;
 
-![](./images/a-cover.png)
+![](images/a-cover.png)

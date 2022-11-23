@@ -92,5 +92,3 @@ In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **
 
 > 1. **UnionAll:** Union operation with sphere and outward-facing cones
 > 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
-
-##

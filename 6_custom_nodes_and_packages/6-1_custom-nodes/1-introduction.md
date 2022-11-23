@@ -14,7 +14,7 @@ Arguably the best feature of custom nodes is their work sharing capabilities. If
 
 ### Many Ways to Build a Node
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes) on the Dynamo Wiki for a more in-depth review.
 
 ### Custom Node Environment & Create Your First Custom Node
 

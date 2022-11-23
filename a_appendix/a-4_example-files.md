@@ -190,7 +190,7 @@
 
 ### Scripting Strategies
 
-{% file src="../.gitbook/assets/SteepestPath.dyn" %}
+{% file src="../9_best_practices/datasets/2/SteepestPath.dyn" %}
 
 ## Sample Workflows
 

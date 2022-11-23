@@ -87,7 +87,7 @@ Sometimes numerical manipulation isn't the right approach. Now you can manually 
 > 1. To use **Direct Manipulation**, select the panel of the point to be moved – arrows will appear over the point selected.
 > 2. Switch to **3D Preview Navigation** mode.
 
-![](../images/10-1/2/attractor\(8\).png)
+![](../images/10-1/2/attractor(8).png)
 
 > 1. Hover over the point and the X, Y, and Z axes will appear.
 > 2. Click and drag the colored arrow to move the corresponding axis, and the **Number Slider** values will update live with the manually moved point.

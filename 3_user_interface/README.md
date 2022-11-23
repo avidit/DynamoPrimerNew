@@ -14,7 +14,7 @@ The User Interface (UI) for Dynamo is organized into five main regions. We will 
 
 ### Menus
 
-![](../.gitbook/assets/userinterface-menu\(1\).jpg)
+![](images/userinterface-menu.jpg)
 
 Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
 
