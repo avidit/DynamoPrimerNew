@@ -1,0 +1,601 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Scripting Strategies - DynamoPrimer</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../1_introduction/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_introduction/1-what-is-dynamo.html"><strong aria-hidden="true">2.1.</strong> What is Dynamo & How Does It Work?</a></li><li class="chapter-item expanded "><a href="../1_introduction/2-primer-user-guide-dynamo-community-and-platform.html"><strong aria-hidden="true">2.2.</strong> Primer User Guide, Dynamo Community & Platform</a></li></ol></li><li class="chapter-item expanded "><a href="../2_setup_for_dynamo/index.html"><strong aria-hidden="true">3.</strong> Setup for Dynamo</a></li><li class="chapter-item expanded "><a href="../3_user_interface/index.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3_user_interface/1-workspace.html"><strong aria-hidden="true">4.1.</strong> Workspace</a></li><li class="chapter-item expanded "><a href="../3_user_interface/2-library.html"><strong aria-hidden="true">4.2.</strong> Library</a></li></ol></li><li class="chapter-item expanded "><a href="../4_nodes_and_wires/index.html"><strong aria-hidden="true">5.</strong> Nodes and Wires</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/index.html"><strong aria-hidden="true">6.</strong> Essential Nodes & Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/index-of-nodes.html"><strong aria-hidden="true">6.1.</strong> Index of Nodes</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html"><strong aria-hidden="true">6.2.</strong> Geometry for Computational Design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/1-geometry-overview.html"><strong aria-hidden="true">6.2.1.</strong> Geometry Overview</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html"><strong aria-hidden="true">6.2.2.</strong> Vector, Plane & Coordinate System</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/3-points.html"><strong aria-hidden="true">6.2.3.</strong> Points</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/4-curves.html"><strong aria-hidden="true">6.2.4.</strong> Curves</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.html"><strong aria-hidden="true">6.2.5.</strong> Surfaces</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.html"><strong aria-hidden="true">6.2.6.</strong> Solids</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/7-meshes.html"><strong aria-hidden="true">6.2.7.</strong> Meshes</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/index.html"><strong aria-hidden="true">6.3.</strong> The Building Blocks of Programs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/1-data.html"><strong aria-hidden="true">6.3.1.</strong> Data</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/2-math.html"><strong aria-hidden="true">6.3.2.</strong> Math</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/3-logic.html"><strong aria-hidden="true">6.3.3.</strong> Logic</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/4-strings.html"><strong aria-hidden="true">6.3.4.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/5-color.html"><strong aria-hidden="true">6.3.5.</strong> Color</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/index.html"><strong aria-hidden="true">6.4.</strong> Designing with Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.html"><strong aria-hidden="true">6.4.1.</strong> What's a List</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html"><strong aria-hidden="true">6.4.2.</strong> Working with Lists</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists.html"><strong aria-hidden="true">6.4.3.</strong> Lists of Lists</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html"><strong aria-hidden="true">6.4.4.</strong> n-Dimensional Lists</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/index.html"><strong aria-hidden="true">6.5.</strong> Dictionaries in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/1-what-is-a-dictionary.html"><strong aria-hidden="true">6.5.1.</strong> What is a Dictionary</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/2-node-uses.html"><strong aria-hidden="true">6.5.2.</strong> Dictionary Nodes</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/3-code-block-uses.html"><strong aria-hidden="true">6.5.3.</strong> Dictionaries in Code Blocks</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/4-dictionary-use-cases.html"><strong aria-hidden="true">6.5.4.</strong> Revit Use-Cases</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/index.html"><strong aria-hidden="true">7.</strong> Custom Nodes & Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/index.html"><strong aria-hidden="true">7.1.</strong> Custom Nodes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.html"><strong aria-hidden="true">7.1.1.</strong> Custom Node Introduction</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/2-creating.html"><strong aria-hidden="true">7.1.2.</strong> Creating a Custom Node</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/3-library.html"><strong aria-hidden="true">7.1.3.</strong> Publishing to Your Library</a></li></ol></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/index.html"><strong aria-hidden="true">7.2.</strong> Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/1-introduction.html"><strong aria-hidden="true">7.2.1.</strong> Package Introduction</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/2-mesh-toolkit.html"><strong aria-hidden="true">7.2.2.</strong> Package Case Study - Mesh Toolkit</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/3-developing.html"><strong aria-hidden="true">7.2.3.</strong> Developing a Package</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/4-publishing.html"><strong aria-hidden="true">7.2.4.</strong> Publishing a Package</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.html"><strong aria-hidden="true">7.2.5.</strong> Zero-Touch Importing</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/index.html"><strong aria-hidden="true">8.</strong> Dynamo for Revit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/1-the-revit-connection.html"><strong aria-hidden="true">8.1.</strong> The Revit Connection</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/2-selecting.html"><strong aria-hidden="true">8.2.</strong> Selecting</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/3-editing.html"><strong aria-hidden="true">8.3.</strong> Editing</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/4-creating.html"><strong aria-hidden="true">8.4.</strong> Creating</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/5-customizing.html"><strong aria-hidden="true">8.5.</strong> Customizing</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/6-documenting.html"><strong aria-hidden="true">8.6.</strong> Documenting</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/index.html"><strong aria-hidden="true">9.</strong> Coding in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/index.html"><strong aria-hidden="true">9.1.</strong> Code Blocks and DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.html"><strong aria-hidden="true">9.1.1.</strong> What's a Code Block</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.html"><strong aria-hidden="true">9.1.2.</strong> DesignScript Syntax</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/3-shorthand.html"><strong aria-hidden="true">9.1.3.</strong> Shorthand</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/4-functions.html"><strong aria-hidden="true">9.1.4.</strong> Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/index.html"><strong aria-hidden="true">9.2.</strong> Geometry with DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/1-designscript-geometry-basics.html"><strong aria-hidden="true">9.2.1.</strong> DesignScript Geometry Basics</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/2-geometric-primitives.html"><strong aria-hidden="true">9.2.2.</strong> Geometric Primitives</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/3-vector-math.html"><strong aria-hidden="true">9.2.3.</strong> Vector Math</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/4-curves.html"><strong aria-hidden="true">9.2.4.</strong> Curves: Interpolated and Control Points</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/5-translation-rotation-and-other-transformations.html"><strong aria-hidden="true">9.2.5.</strong> Translation, Rotation, and Other Transformations</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/6-surfaces.html"><strong aria-hidden="true">9.2.6.</strong> Surfaces: Interpolated, Control Points, Loft, Revolve</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/7-geometric-parameterization.html"><strong aria-hidden="true">9.2.7.</strong> Geometric Parameterization</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/8-intersection-and-trim.html"><strong aria-hidden="true">9.2.8.</strong> Intersection and Trim</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/9-geometric-booleans.html"><strong aria-hidden="true">9.2.9.</strong> Geometric Booleans</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/10-python-point-generators.html"><strong aria-hidden="true">9.2.10.</strong> Python Point Generators</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/index.html"><strong aria-hidden="true">9.3.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/1-python.html"><strong aria-hidden="true">9.3.1.</strong> Python Nodes</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/2-python-revit.html"><strong aria-hidden="true">9.3.2.</strong> Python and Revit</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/3-python-templates.html"><strong aria-hidden="true">9.3.3.</strong> Setup Your Own Python Template</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../9_best_practices/index.html"><strong aria-hidden="true">10.</strong> Best Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9_best_practices/1-graph-strategies.html"><strong aria-hidden="true">10.1.</strong> Graph Strategies</a></li><li class="chapter-item expanded "><a href="../9_best_practices/2-scripting-strategies.html" class="active"><strong aria-hidden="true">10.2.</strong> Scripting Strategies</a></li><li class="chapter-item expanded "><a href="../9_best_practices/3-scripting-reference.html"><strong aria-hidden="true">10.3.</strong> Scripting Reference</a></li><li class="chapter-item expanded "><a href="../9_best_practices/4-managing-your-program.html"><strong aria-hidden="true">10.4.</strong> Managing Your Program</a></li></ol></li><li class="chapter-item expanded "><a href="../10_sample_workflow/index.html"><strong aria-hidden="true">11.</strong> Sample Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/index.html"><strong aria-hidden="true">11.1.</strong> Getting Started Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.html"><strong aria-hidden="true">11.1.1.</strong> Parametric Vase</a></li><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.html"><strong aria-hidden="true">11.1.2.</strong> Attractor Points</a></li></ol></li><li class="chapter-item expanded "><a href="../10_sample_workflow/10-2_concept-index.html"><strong aria-hidden="true">11.2.</strong> Concept Index</a></li></ol></li><li class="chapter-item expanded "><a href="../a_appendix/index.html"><strong aria-hidden="true">12.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../a_appendix/a-1_visual-programming-and-dynamo.html"><strong aria-hidden="true">12.1.</strong> Visual Programming and Dynamo</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-2_resources.html"><strong aria-hidden="true">12.2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-3_packages.html"><strong aria-hidden="true">12.3.</strong> Useful Packages</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-4_example-files.html"><strong aria-hidden="true">12.4.</strong> Example Files</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-5_download-pdf.html"><strong aria-hidden="true">12.5.</strong> Download PDF</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DynamoPrimer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="scripting-strategies"><a class="header" href="#scripting-strategies">Scripting Strategies</a></h1>
+<p>Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.</p>
+<p><img src="./images/2/cad-chart-textual.jpg" alt="" /></p>
+<h3 id="know-when-to-script"><a class="header" href="#know-when-to-script">Know When to Script</a></h3>
+<p>Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.</p>
+<p><strong>Use text-scripting for:</strong></p>
+<ul>
+<li>Looping</li>
+<li>Recursion</li>
+<li>Accessing external libraries</li>
+</ul>
+<p><strong>Choose a language:</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td></td><td><strong>Looping</strong></td><td><strong>Recursion</strong></td><td><strong>Condense Nodes</strong></td><td><strong>Ext. Libraries</strong></td><td><strong>Shorthand</strong></td></tr>
+<tr><td><strong>DesignScript</strong></td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td><strong>Python</strong></td><td>Yes</td><td>Yes</td><td>Partially</td><td>Yes</td><td>No</td></tr>
+<tr><td><strong>ZeroTouch (C#)</strong></td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>No</td></tr>
+</tbody></table>
+</div>
+<p>{% hint style=&quot;info&quot; %}
+Refer to <a href="13-3_scripting-reference.html">Scripting Reference</a> for a list of what each Dynamo library gives you access to.
+{% endhint %}</p>
+<h3 id="think-parametrically"><a class="header" href="#think-parametrically">Think Parametrically</a></h3>
+<p>When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.</p>
+<p><strong>Identify the external variables:</strong></p>
+<ul>
+<li>Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.</li>
+<li>Before writing code, identify the variables:
+<ul>
+<li>A minimal set of inputs</li>
+<li>The intended output</li>
+<li>Constants</li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/2/thinkparametrically01.jpg" alt="" /></p>
+<blockquote>
+<p>Several variables have been established prior to writing code.</p>
+<ol>
+<li>The surface we will simulate rainfall on.</li>
+<li>The number of rain drops (agents) we want.</li>
+<li>How far we want the rain drops to travel.</li>
+<li>Toggle between descending the steepest path versus traversing the surface.</li>
+<li>Python Node with the respective number of inputs.</li>
+<li>A Code Block to make the returned curves blue.</li>
+</ol>
+</blockquote>
+<p><strong>Design the internal relationships:</strong></p>
+<ul>
+<li>Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.</li>
+<li>Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.</li>
+<li>Minimize number of inputs by only exposing key parameters:
+<ul>
+<li>If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/2/thinkparametrically02.jpg" alt="" /></p>
+<blockquote>
+<p>The code &quot;modules&quot; from the example in <a href="http://primer.dynamobim.org/en/09_Custom-Nodes/9-4_Python.html">Python Node</a>.</p>
+<ol>
+<li>Inputs.</li>
+<li>Variables internal to the script.</li>
+<li>A loop that uses these inputs and variables to perform its function.</li>
+</ol>
+</blockquote>
+<p>{% hint style=&quot;info&quot; %}
+Tip: Place as much emphasis on the process as you do on the solution.
+{% endhint %}</p>
+<h3 id="dont-repeat-yourself-the-dry-principle"><a class="header" href="#dont-repeat-yourself-the-dry-principle"><strong>Don't repeat yourself (the DRY principle):</strong></a></h3>
+<ul>
+<li>When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.</li>
+<li>The DRY principle is stated as &quot;Every piece of knowledge must have a single, unambiguous, authoritative representation within a system&quot;:
+<ul>
+<li>When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.</li>
+</ul>
+</li>
+</ul>
+<pre><code>### BAD
+for i in range(4):
+  for j in range(4):
+    point = Point.ByCoordinates(3*i, 3*j, 0)
+    points.append(point)
+</code></pre>
+<pre><code>### GOOD
+count = IN[0]
+pDist = IN[1]
+
+for i in range(count):
+  for j in range(count):
+    point = Point.ByCoordinates(pDist*i, pDist*j, 0)
+    points.append(point)
+</code></pre>
+<p>{% hint style=&quot;info&quot; %}
+Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+{% endhint %}</p>
+<h3 id="structure-modularly"><a class="header" href="#structure-modularly">Structure Modularly</a></h3>
+<p>As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.</p>
+<p><strong>Write code in modules:</strong></p>
+<ul>
+<li>A &quot;module&quot; is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.</li>
+<li>This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).</li>
+<li>Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.</li>
+</ul>
+<p><img src="./images/2/thinkparametrically02.jpg" alt="" /></p>
+<blockquote>
+<p>These loops call a class named &quot;agent&quot; that we will develop in the exercise.</p>
+<ol>
+<li>A code module that defines the start point of each agent.</li>
+<li>A code module that updates the agent.</li>
+<li>A code module that draws a trail for the agent's path.</li>
+</ol>
+</blockquote>
+<p><strong>Spotting code re-use:</strong></p>
+<ul>
+<li>If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.</li>
+<li>&quot;Manager&quot; functions control program flow and primarily contain calls to &quot;Worker&quot; functions that handle low-level details, like moving data between structures.</li>
+</ul>
+<p>This example creates spheres with radii and color based on the Z value of the center points.</p>
+<p><img src="./images/2/spotcoderesuse.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Two &quot;worker&quot; parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.</li>
+<li>A &quot;manager&quot; parent function that combines the two worker functions. Calling this will call both functions inside it.</li>
+</ol>
+</blockquote>
+<p><strong>Only show what needs to be seen:</strong></p>
+<ul>
+<li>A module interface expresses the elements that are provided and required by the module.</li>
+<li>Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.</li>
+</ul>
+<p><strong>Separability/Replaceability:</strong></p>
+<ul>
+<li>Modules don’t know or care about each other.</li>
+</ul>
+<p><strong>General forms of modularization:</strong></p>
+<ul>
+<li>
+<p>Code Grouping:</p>
+<pre><code># IMPORT LIBRARIES
+import random
+import math
+import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
+# DEFINE PARAMETER INPUTS
+surfIn = IN[0]
+maxSteps = IN[1]
+</code></pre>
+</li>
+<li>
+<p>Functions:</p>
+<pre><code>def get_step_size():
+  area = surfIn.Area
+  stepSize = math.sqrt(area)/100
+  return stepSize
+
+stepSize = get_step_size()
+</code></pre>
+</li>
+<li>
+<p>Classes:</p>
+<pre><code>class MyClass:
+  i = 12345
+
+  def f(self):
+    return 'hello world'
+
+numbers = MyClass.i
+greeting = MyClass.f
+</code></pre>
+</li>
+</ul>
+<h3 id="flex-continuously"><a class="header" href="#flex-continuously">Flex Continuously</a></h3>
+<p>While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.</p>
+<p><strong>Test as you go:</strong></p>
+<ul>
+<li>Whenever you complete a cluster of functionality:
+<ul>
+<li>Step back and inspect your code.</li>
+<li>Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?</li>
+<li>Quickly test to make sure it is returning data that “makes sense”.</li>
+</ul>
+</li>
+<li>Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:</li>
+</ul>
+<p><img src="./images/2/flexcontinuously.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Check that all edges of the solid are being returned as curves to create a bounding box around.</li>
+<li>Check that our Count inputs are successfully being converted to Ranges.</li>
+<li>Check that coordinate systems have been properly translated and rotated in this loop.</li>
+</ol>
+</blockquote>
+<p><strong>Anticipate “edge cases”:</strong></p>
+<ul>
+<li>While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.</li>
+<li>Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.</li>
+<li>Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
+<ul>
+<li>Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.</li>
+</ul>
+</li>
+</ul>
+<p>{% hint style=&quot;info&quot; %}
+Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+{% endhint %}</p>
+<h3 id="debug-efficiently"><a class="header" href="#debug-efficiently">Debug Efficiently</a></h3>
+<p>Debugging is the process of eliminating &quot;bugs&quot; from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.</p>
+<p><strong>Use the watch bubble:</strong></p>
+<ul>
+<li>Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.</li>
+</ul>
+<p><strong>Write meaningful comments:</strong></p>
+<ul>
+<li>A module of code will be much easier to debug if its intended outcome is clearly described.</li>
+</ul>
+<pre><code class="language-py"># Loop through X and Y
+for i in range(xCount):
+  for j in range(yCount):
+
+    # Rotate and translate the coordinate system
+    toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),(90*(i+j%seed)))
+    vec = Vector.ByCoordinates((xDist*i),(yDist*j),0)
+    toCoord = toCoord.Translate(vec)
+
+    # Transform the solid from the source coord system to the target coord system and append to the list
+    solids.append(solid.Transform(fromCoord,toCoord))
+</code></pre>
+<blockquote>
+<p>Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.</p>
+</blockquote>
+<p><strong>Leverage the code's modularity:</strong></p>
+<ul>
+<li>The source of an issue can be isolated to certain modules.</li>
+<li>Once the faulty module has been identified, fixing the problem is considerably simpler.</li>
+<li>When a program must be modified, code that has been developed in modules will be much easier to change:
+<ul>
+<li>You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/2/leveragecode&#x27;smodularity.jpg" alt="" /></p>
+<blockquote>
+<p>Debugging the example file from <a href="http://primer.dynamobim.org/en/09_Custom-Nodes/9-4_Python.html">Python Node</a>.</p>
+<ol>
+<li>The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.</li>
+<li>The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.</li>
+<li>The code &quot;module&quot; we've inserted to address the xDist and yDist value issue.</li>
+</ol>
+</blockquote>
+<h2 id="exercise-steepest-path"><a class="header" href="#exercise-steepest-path">Exercise: Steepest Path</a></h2>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;./datasets/9/2/SteepestPath.dyn&quot; %}</p>
+<p>With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.</p>
+<p>Our script applied to an attractor-deformed surface.</p>
+<p><img src="./images/2/scriptingstrategies-exercise-01.jpg" alt="" /></p>
+<p>The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.</p>
+<p>All the libraries we intend on using need to be imported here.</p>
+<p><img src="./images/2/scriptingstrategies-exercise-02.jpg" alt="" /></p>
+<p>Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.</p>
+<p>We need to define inputs that correspond to variables in the Python script and determine a desired output:</p>
+<p><img src="./images/2/scriptingstrategies-exercise-03.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>The surface we want to walk down.</li>
+<li>The number of agents we want to walk.</li>
+<li>The maximum number of steps the agents are allowed to take.</li>
+<li>An option to take the shortest path down the surface or traverse it.</li>
+<li>The Python Node with input identifiers that correspond to inputs in the script (IN[0], IN[1]).</li>
+<li>Output curves that can be displayed with a different color.</li>
+</ol>
+</blockquote>
+<p>Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or &quot;module&quot; can be called with different variables or even reused in another script.</p>
+<p>We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:</p>
+<p><img src="./images/2/scriptingstrategies-exercise-04.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Name.</li>
+<li>Global attributes that all the agents share.</li>
+<li>Instance attributes that are unique to each agent.</li>
+<li>A function for taking a step.</li>
+<li>A function for cataloging the position of each step to a trail list.</li>
+</ol>
+</blockquote>
+<p>Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.</p>
+<p>We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:</p>
+<p><img src="./images/2/scriptingstrategies-exercise-05.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>A new empty trail list.</li>
+<li>Where they will start their journey on the surface.</li>
+<li>We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.</li>
+</ol>
+</blockquote>
+<p>Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.</p>
+<p><img src="./images/2/scriptingstrategies-exercise-06.jpg" alt="" /></p>
+<p>Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.</p>
+<p><img src="./images/2/scriptingstrategies-exercise-07.jpg" alt="" /></p>
+<p>Our script for finding the steepest paths.</p>
+<p><img src="./images/2/scriptingstrategies-exercise-08.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>A preset that simulates rainfall on the underlying surface.</li>
+<li>Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.</li>
+</ol>
+</blockquote>
+<p>The full Python text-script.</p>
+<pre><code>### STEEPEST PATH ALGORITHM
+
+# IMPORT LIBRARIES
+import sys
+sys.path.append('C:\Program Files (x86)\IronPython 2.7\Lib')
+import random
+import math
+import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
+# DEFINE PARAMETER INPUTS
+surfIn = IN[0]
+numAgents = IN[1]
+maxSteps = IN[2]
+decendBoo = IN[3]
+
+
+# DEFINE AGENT CLASS
+class Agent(object):
+    def get_step_size():
+        area = surfIn.Area
+        stepSize = math.sqrt(area)/100
+        return stepSize
+
+    zVec = Vector.ZAxis()
+    stepSize = get_step_size()
+    dupTol = 0.001
+
+
+    def __init__(self,u,v):
+        self.endBoo = False
+        self.U = u
+        self.V = v
+        self.Z = None
+        self.trailPts = []
+        self.update_trail()
+
+    def update(self):
+        if not self.endBoo:
+            positionPt01 = self.trailPts[-1]
+            normalVec = surfIn.NormalAtParameter(self.U,self.V)
+            gradientVec = Vector.Cross(self.zVec, normalVec)
+            if decendBoo:
+            	gradientVec = gradientVec.Rotate(normalVec,-90)
+
+            gradientVec = gradientVec.Normalized()
+            gradientVec = gradientVec.Scale(self.stepSize)
+            positionPt02 = positionPt01.Add(gradientVec)
+            newPt = surfIn.ClosestPointTo(positionPt02)
+            newUV = surfIn.UVParameterAtPoint(newPt)
+            newU, newV = newUV.U, newUV.V
+            newZ = newPt.Z
+
+            if decendBoo and (self.Z &lt;= newZ):
+            	self.endBoo = True
+            else:
+	            if ((abs(self.U-newU) &lt;= self.dupTol) and (abs(self.V-newV) &lt;= self.dupTol)):
+	                self.endBoo = True
+	            else:
+	                self.U, self.V = newU, newV
+	                self.update_trail()
+
+    def update_trail(self):
+        trailPt = surfIn.PointAtParameter(self.U,self.V)
+        self.trailPts.append(trailPt)
+        self.Z = trailPt.Z
+
+
+# INITIALIZE AGENTS
+agents = []
+for i in range(numAgents):
+	u = float(random.randrange(1000))/1000
+	v = float(random.randrange(1000))/1000
+	agent = Agent(u,v)
+	agents.append(agent)
+
+
+# UPDATE AGENTS
+for i in range(maxSteps):
+	for eachAgent in agents:
+		eachAgent.update()
+
+# DRAW TRAILS
+trails = []
+for eachAgent in agents:
+	trailPts = eachAgent.trailPts
+	if (len(trailPts) &gt; 1):
+		trail = PolyCurve.ByPoints(trailPts)
+		trails.append(trail)
+
+# OUTPUT TRAILS
+OUT = trails
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9_best_practices/1-graph-strategies.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9_best_practices/3-scripting-reference.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9_best_practices/1-graph-strategies.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9_best_practices/3-scripting-reference.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

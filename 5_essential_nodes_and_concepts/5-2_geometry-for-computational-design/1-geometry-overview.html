@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Geometry Overview - DynamoPrimer</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../../1_introduction/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../1_introduction/1-what-is-dynamo.html"><strong aria-hidden="true">2.1.</strong> What is Dynamo & How Does It Work?</a></li><li class="chapter-item expanded "><a href="../../1_introduction/2-primer-user-guide-dynamo-community-and-platform.html"><strong aria-hidden="true">2.2.</strong> Primer User Guide, Dynamo Community & Platform</a></li></ol></li><li class="chapter-item expanded "><a href="../../2_setup_for_dynamo/index.html"><strong aria-hidden="true">3.</strong> Setup for Dynamo</a></li><li class="chapter-item expanded "><a href="../../3_user_interface/index.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../3_user_interface/1-workspace.html"><strong aria-hidden="true">4.1.</strong> Workspace</a></li><li class="chapter-item expanded "><a href="../../3_user_interface/2-library.html"><strong aria-hidden="true">4.2.</strong> Library</a></li></ol></li><li class="chapter-item expanded "><a href="../../4_nodes_and_wires/index.html"><strong aria-hidden="true">5.</strong> Nodes and Wires</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/index.html"><strong aria-hidden="true">6.</strong> Essential Nodes & Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/index-of-nodes.html"><strong aria-hidden="true">6.1.</strong> Index of Nodes</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html"><strong aria-hidden="true">6.2.</strong> Geometry for Computational Design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/1-geometry-overview.html" class="active"><strong aria-hidden="true">6.2.1.</strong> Geometry Overview</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html"><strong aria-hidden="true">6.2.2.</strong> Vector, Plane & Coordinate System</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/3-points.html"><strong aria-hidden="true">6.2.3.</strong> Points</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/4-curves.html"><strong aria-hidden="true">6.2.4.</strong> Curves</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.html"><strong aria-hidden="true">6.2.5.</strong> Surfaces</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.html"><strong aria-hidden="true">6.2.6.</strong> Solids</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/7-meshes.html"><strong aria-hidden="true">6.2.7.</strong> Meshes</a></li></ol></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/index.html"><strong aria-hidden="true">6.3.</strong> The Building Blocks of Programs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/1-data.html"><strong aria-hidden="true">6.3.1.</strong> Data</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/2-math.html"><strong aria-hidden="true">6.3.2.</strong> Math</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/3-logic.html"><strong aria-hidden="true">6.3.3.</strong> Logic</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/4-strings.html"><strong aria-hidden="true">6.3.4.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/5-color.html"><strong aria-hidden="true">6.3.5.</strong> Color</a></li></ol></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/index.html"><strong aria-hidden="true">6.4.</strong> Designing with Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.html"><strong aria-hidden="true">6.4.1.</strong> What's a List</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html"><strong aria-hidden="true">6.4.2.</strong> Working with Lists</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists.html"><strong aria-hidden="true">6.4.3.</strong> Lists of Lists</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html"><strong aria-hidden="true">6.4.4.</strong> n-Dimensional Lists</a></li></ol></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/index.html"><strong aria-hidden="true">6.5.</strong> Dictionaries in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/1-what-is-a-dictionary.html"><strong aria-hidden="true">6.5.1.</strong> What is a Dictionary</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/2-node-uses.html"><strong aria-hidden="true">6.5.2.</strong> Dictionary Nodes</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/3-code-block-uses.html"><strong aria-hidden="true">6.5.3.</strong> Dictionaries in Code Blocks</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/4-dictionary-use-cases.html"><strong aria-hidden="true">6.5.4.</strong> Revit Use-Cases</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/index.html"><strong aria-hidden="true">7.</strong> Custom Nodes & Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/index.html"><strong aria-hidden="true">7.1.</strong> Custom Nodes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.html"><strong aria-hidden="true">7.1.1.</strong> Custom Node Introduction</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/2-creating.html"><strong aria-hidden="true">7.1.2.</strong> Creating a Custom Node</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/3-library.html"><strong aria-hidden="true">7.1.3.</strong> Publishing to Your Library</a></li></ol></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/index.html"><strong aria-hidden="true">7.2.</strong> Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/1-introduction.html"><strong aria-hidden="true">7.2.1.</strong> Package Introduction</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/2-mesh-toolkit.html"><strong aria-hidden="true">7.2.2.</strong> Package Case Study - Mesh Toolkit</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/3-developing.html"><strong aria-hidden="true">7.2.3.</strong> Developing a Package</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/4-publishing.html"><strong aria-hidden="true">7.2.4.</strong> Publishing a Package</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.html"><strong aria-hidden="true">7.2.5.</strong> Zero-Touch Importing</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/index.html"><strong aria-hidden="true">8.</strong> Dynamo for Revit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/1-the-revit-connection.html"><strong aria-hidden="true">8.1.</strong> The Revit Connection</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/2-selecting.html"><strong aria-hidden="true">8.2.</strong> Selecting</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/3-editing.html"><strong aria-hidden="true">8.3.</strong> Editing</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/4-creating.html"><strong aria-hidden="true">8.4.</strong> Creating</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/5-customizing.html"><strong aria-hidden="true">8.5.</strong> Customizing</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/6-documenting.html"><strong aria-hidden="true">8.6.</strong> Documenting</a></li></ol></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/index.html"><strong aria-hidden="true">9.</strong> Coding in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/index.html"><strong aria-hidden="true">9.1.</strong> Code Blocks and DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.html"><strong aria-hidden="true">9.1.1.</strong> What's a Code Block</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.html"><strong aria-hidden="true">9.1.2.</strong> DesignScript Syntax</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/3-shorthand.html"><strong aria-hidden="true">9.1.3.</strong> Shorthand</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/4-functions.html"><strong aria-hidden="true">9.1.4.</strong> Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/index.html"><strong aria-hidden="true">9.2.</strong> Geometry with DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/1-designscript-geometry-basics.html"><strong aria-hidden="true">9.2.1.</strong> DesignScript Geometry Basics</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/2-geometric-primitives.html"><strong aria-hidden="true">9.2.2.</strong> Geometric Primitives</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/3-vector-math.html"><strong aria-hidden="true">9.2.3.</strong> Vector Math</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/4-curves.html"><strong aria-hidden="true">9.2.4.</strong> Curves: Interpolated and Control Points</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/5-translation-rotation-and-other-transformations.html"><strong aria-hidden="true">9.2.5.</strong> Translation, Rotation, and Other Transformations</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/6-surfaces.html"><strong aria-hidden="true">9.2.6.</strong> Surfaces: Interpolated, Control Points, Loft, Revolve</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/7-geometric-parameterization.html"><strong aria-hidden="true">9.2.7.</strong> Geometric Parameterization</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/8-intersection-and-trim.html"><strong aria-hidden="true">9.2.8.</strong> Intersection and Trim</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/9-geometric-booleans.html"><strong aria-hidden="true">9.2.9.</strong> Geometric Booleans</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/10-python-point-generators.html"><strong aria-hidden="true">9.2.10.</strong> Python Point Generators</a></li></ol></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/index.html"><strong aria-hidden="true">9.3.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/1-python.html"><strong aria-hidden="true">9.3.1.</strong> Python Nodes</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/2-python-revit.html"><strong aria-hidden="true">9.3.2.</strong> Python and Revit</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/3-python-templates.html"><strong aria-hidden="true">9.3.3.</strong> Setup Your Own Python Template</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../9_best_practices/index.html"><strong aria-hidden="true">10.</strong> Best Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../9_best_practices/1-graph-strategies.html"><strong aria-hidden="true">10.1.</strong> Graph Strategies</a></li><li class="chapter-item expanded "><a href="../../9_best_practices/2-scripting-strategies.html"><strong aria-hidden="true">10.2.</strong> Scripting Strategies</a></li><li class="chapter-item expanded "><a href="../../9_best_practices/3-scripting-reference.html"><strong aria-hidden="true">10.3.</strong> Scripting Reference</a></li><li class="chapter-item expanded "><a href="../../9_best_practices/4-managing-your-program.html"><strong aria-hidden="true">10.4.</strong> Managing Your Program</a></li></ol></li><li class="chapter-item expanded "><a href="../../10_sample_workflow/index.html"><strong aria-hidden="true">11.</strong> Sample Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-1_getting-started-workflows/index.html"><strong aria-hidden="true">11.1.</strong> Getting Started Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.html"><strong aria-hidden="true">11.1.1.</strong> Parametric Vase</a></li><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.html"><strong aria-hidden="true">11.1.2.</strong> Attractor Points</a></li></ol></li><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-2_concept-index.html"><strong aria-hidden="true">11.2.</strong> Concept Index</a></li></ol></li><li class="chapter-item expanded "><a href="../../a_appendix/index.html"><strong aria-hidden="true">12.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../a_appendix/a-1_visual-programming-and-dynamo.html"><strong aria-hidden="true">12.1.</strong> Visual Programming and Dynamo</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-2_resources.html"><strong aria-hidden="true">12.2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-3_packages.html"><strong aria-hidden="true">12.3.</strong> Useful Packages</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-4_example-files.html"><strong aria-hidden="true">12.4.</strong> Example Files</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-5_download-pdf.html"><strong aria-hidden="true">12.5.</strong> Download PDF</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DynamoPrimer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="geometry-overview"><a class="header" href="#geometry-overview">Geometry Overview</a></h1>
+<h2 id="geometry-in-dynamo-sandbox"><a class="header" href="#geometry-in-dynamo-sandbox">Geometry in Dynamo Sandbox</a></h2>
+<p><strong>Geometry</strong> is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.</p>
+<p>Understanding the Geometry types and <a href="1-geometry-overview.html#stepping-through-the-hierarchy">how they are related</a> will allow us to navigate the collection of <strong>Geometry Nodes</strong> available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.</p>
+<p><img src="../images/5-2/1/geometryoverview-geometryindynamo.jpg" alt="" /></p>
+<p>Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.</p>
+<p><img src="../images/5-2/1/GeometryforComputationalDesign-Overview.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Note the assumed coordinate system rendered by the grid and colored axes</li>
+<li>Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn&quot; %}</p>
+<h2 id="the-concept-of-geometry"><a class="header" href="#the-concept-of-geometry">The Concept of Geometry</a></h2>
+<p>Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.</p>
+<p><img src="../images/5-2/1/StanfordBunny.jpg" alt="Stanford Bunny" /></p>
+<blockquote>
+<p>If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.</p>
+</blockquote>
+<p>Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:</p>
+<ol>
+<li>Geometry is <strong>Data</strong> - to the computer and Dynamo, a Bunny not all that different from a number.</li>
+<li>Geometry relies on <strong>Abstraction</strong> - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system</li>
+<li>Geometry has a <strong>Hierarchy</strong> - points come together to make lines, lines come together to make surfaces, and so on</li>
+<li>Geometry simultaneously describes both <strong>the Part and the Whole</strong> - when we have a curve, it is both the shape as well as all the possible points along it</li>
+</ol>
+<p>In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.</p>
+<h2 id="stepping-through-the-hierarchy"><a class="header" href="#stepping-through-the-hierarchy">Stepping through the Hierarchy</a></h2>
+<p>Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the &quot;stuff&quot; we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.</p>
+<p><img src="../images/5-2/1/GeometryDimensionality.jpg" alt="Computational Geometry" /></p>
+<blockquote>
+<ol>
+<li>A <strong>Point</strong> (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate</li>
+<li>A <strong>Line</strong> (defined by two points) now has <em>one</em> dimension - we can &quot;walk&quot; the line either forward (positive direction) or backward (negative direction)</li>
+<li>A <strong>Plane</strong> (defined by two lines) has <em>two</em> dimensions - walking more left or more right is now possible</li>
+<li>A <strong>Box</strong> (defined by two planes) has <em>three</em> dimensions - we can define a position relative to up or down</li>
+</ol>
+</blockquote>
+<p>Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or &quot;Helpers,&quot; each of which we can group by what they help do and types that help describe the shape of model elements.</p>
+<p><img src="../images/5-2/1/GeometryHierarchy.jpg" alt="Geometry Hierarchy" /></p>
+<h2 id="going-further-with-geometry"><a class="header" href="#going-further-with-geometry">Going Further with Geometry</a></h2>
+<p>Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:</p>
+<ol>
+<li>Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces</li>
+<li>When working with Revit, we can reference Revit elements to use in Dynamo</li>
+<li>The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the <a href="https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit">Mesh Toolkit</a> package</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

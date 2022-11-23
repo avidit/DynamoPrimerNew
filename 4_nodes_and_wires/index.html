@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Nodes and Wires - DynamoPrimer</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../1_introduction/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_introduction/1-what-is-dynamo.html"><strong aria-hidden="true">2.1.</strong> What is Dynamo & How Does It Work?</a></li><li class="chapter-item expanded "><a href="../1_introduction/2-primer-user-guide-dynamo-community-and-platform.html"><strong aria-hidden="true">2.2.</strong> Primer User Guide, Dynamo Community & Platform</a></li></ol></li><li class="chapter-item expanded "><a href="../2_setup_for_dynamo/index.html"><strong aria-hidden="true">3.</strong> Setup for Dynamo</a></li><li class="chapter-item expanded "><a href="../3_user_interface/index.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3_user_interface/1-workspace.html"><strong aria-hidden="true">4.1.</strong> Workspace</a></li><li class="chapter-item expanded "><a href="../3_user_interface/2-library.html"><strong aria-hidden="true">4.2.</strong> Library</a></li></ol></li><li class="chapter-item expanded "><a href="../4_nodes_and_wires/index.html" class="active"><strong aria-hidden="true">5.</strong> Nodes and Wires</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/index.html"><strong aria-hidden="true">6.</strong> Essential Nodes & Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/index-of-nodes.html"><strong aria-hidden="true">6.1.</strong> Index of Nodes</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html"><strong aria-hidden="true">6.2.</strong> Geometry for Computational Design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/1-geometry-overview.html"><strong aria-hidden="true">6.2.1.</strong> Geometry Overview</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html"><strong aria-hidden="true">6.2.2.</strong> Vector, Plane & Coordinate System</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/3-points.html"><strong aria-hidden="true">6.2.3.</strong> Points</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/4-curves.html"><strong aria-hidden="true">6.2.4.</strong> Curves</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.html"><strong aria-hidden="true">6.2.5.</strong> Surfaces</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.html"><strong aria-hidden="true">6.2.6.</strong> Solids</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/7-meshes.html"><strong aria-hidden="true">6.2.7.</strong> Meshes</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/index.html"><strong aria-hidden="true">6.3.</strong> The Building Blocks of Programs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/1-data.html"><strong aria-hidden="true">6.3.1.</strong> Data</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/2-math.html"><strong aria-hidden="true">6.3.2.</strong> Math</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/3-logic.html"><strong aria-hidden="true">6.3.3.</strong> Logic</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/4-strings.html"><strong aria-hidden="true">6.3.4.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/5-color.html"><strong aria-hidden="true">6.3.5.</strong> Color</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/index.html"><strong aria-hidden="true">6.4.</strong> Designing with Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.html"><strong aria-hidden="true">6.4.1.</strong> What's a List</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html"><strong aria-hidden="true">6.4.2.</strong> Working with Lists</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists.html"><strong aria-hidden="true">6.4.3.</strong> Lists of Lists</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html"><strong aria-hidden="true">6.4.4.</strong> n-Dimensional Lists</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/index.html"><strong aria-hidden="true">6.5.</strong> Dictionaries in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/1-what-is-a-dictionary.html"><strong aria-hidden="true">6.5.1.</strong> What is a Dictionary</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/2-node-uses.html"><strong aria-hidden="true">6.5.2.</strong> Dictionary Nodes</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/3-code-block-uses.html"><strong aria-hidden="true">6.5.3.</strong> Dictionaries in Code Blocks</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/4-dictionary-use-cases.html"><strong aria-hidden="true">6.5.4.</strong> Revit Use-Cases</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/index.html"><strong aria-hidden="true">7.</strong> Custom Nodes & Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/index.html"><strong aria-hidden="true">7.1.</strong> Custom Nodes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.html"><strong aria-hidden="true">7.1.1.</strong> Custom Node Introduction</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/2-creating.html"><strong aria-hidden="true">7.1.2.</strong> Creating a Custom Node</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/3-library.html"><strong aria-hidden="true">7.1.3.</strong> Publishing to Your Library</a></li></ol></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/index.html"><strong aria-hidden="true">7.2.</strong> Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/1-introduction.html"><strong aria-hidden="true">7.2.1.</strong> Package Introduction</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/2-mesh-toolkit.html"><strong aria-hidden="true">7.2.2.</strong> Package Case Study - Mesh Toolkit</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/3-developing.html"><strong aria-hidden="true">7.2.3.</strong> Developing a Package</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/4-publishing.html"><strong aria-hidden="true">7.2.4.</strong> Publishing a Package</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.html"><strong aria-hidden="true">7.2.5.</strong> Zero-Touch Importing</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/index.html"><strong aria-hidden="true">8.</strong> Dynamo for Revit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/1-the-revit-connection.html"><strong aria-hidden="true">8.1.</strong> The Revit Connection</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/2-selecting.html"><strong aria-hidden="true">8.2.</strong> Selecting</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/3-editing.html"><strong aria-hidden="true">8.3.</strong> Editing</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/4-creating.html"><strong aria-hidden="true">8.4.</strong> Creating</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/5-customizing.html"><strong aria-hidden="true">8.5.</strong> Customizing</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/6-documenting.html"><strong aria-hidden="true">8.6.</strong> Documenting</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/index.html"><strong aria-hidden="true">9.</strong> Coding in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/index.html"><strong aria-hidden="true">9.1.</strong> Code Blocks and DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.html"><strong aria-hidden="true">9.1.1.</strong> What's a Code Block</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.html"><strong aria-hidden="true">9.1.2.</strong> DesignScript Syntax</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/3-shorthand.html"><strong aria-hidden="true">9.1.3.</strong> Shorthand</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/4-functions.html"><strong aria-hidden="true">9.1.4.</strong> Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/index.html"><strong aria-hidden="true">9.2.</strong> Geometry with DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/1-designscript-geometry-basics.html"><strong aria-hidden="true">9.2.1.</strong> DesignScript Geometry Basics</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/2-geometric-primitives.html"><strong aria-hidden="true">9.2.2.</strong> Geometric Primitives</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/3-vector-math.html"><strong aria-hidden="true">9.2.3.</strong> Vector Math</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/4-curves.html"><strong aria-hidden="true">9.2.4.</strong> Curves: Interpolated and Control Points</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/5-translation-rotation-and-other-transformations.html"><strong aria-hidden="true">9.2.5.</strong> Translation, Rotation, and Other Transformations</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/6-surfaces.html"><strong aria-hidden="true">9.2.6.</strong> Surfaces: Interpolated, Control Points, Loft, Revolve</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/7-geometric-parameterization.html"><strong aria-hidden="true">9.2.7.</strong> Geometric Parameterization</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/8-intersection-and-trim.html"><strong aria-hidden="true">9.2.8.</strong> Intersection and Trim</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/9-geometric-booleans.html"><strong aria-hidden="true">9.2.9.</strong> Geometric Booleans</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/10-python-point-generators.html"><strong aria-hidden="true">9.2.10.</strong> Python Point Generators</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/index.html"><strong aria-hidden="true">9.3.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/1-python.html"><strong aria-hidden="true">9.3.1.</strong> Python Nodes</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/2-python-revit.html"><strong aria-hidden="true">9.3.2.</strong> Python and Revit</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/3-python-templates.html"><strong aria-hidden="true">9.3.3.</strong> Setup Your Own Python Template</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../9_best_practices/index.html"><strong aria-hidden="true">10.</strong> Best Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9_best_practices/1-graph-strategies.html"><strong aria-hidden="true">10.1.</strong> Graph Strategies</a></li><li class="chapter-item expanded "><a href="../9_best_practices/2-scripting-strategies.html"><strong aria-hidden="true">10.2.</strong> Scripting Strategies</a></li><li class="chapter-item expanded "><a href="../9_best_practices/3-scripting-reference.html"><strong aria-hidden="true">10.3.</strong> Scripting Reference</a></li><li class="chapter-item expanded "><a href="../9_best_practices/4-managing-your-program.html"><strong aria-hidden="true">10.4.</strong> Managing Your Program</a></li></ol></li><li class="chapter-item expanded "><a href="../10_sample_workflow/index.html"><strong aria-hidden="true">11.</strong> Sample Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/index.html"><strong aria-hidden="true">11.1.</strong> Getting Started Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.html"><strong aria-hidden="true">11.1.1.</strong> Parametric Vase</a></li><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.html"><strong aria-hidden="true">11.1.2.</strong> Attractor Points</a></li></ol></li><li class="chapter-item expanded "><a href="../10_sample_workflow/10-2_concept-index.html"><strong aria-hidden="true">11.2.</strong> Concept Index</a></li></ol></li><li class="chapter-item expanded "><a href="../a_appendix/index.html"><strong aria-hidden="true">12.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../a_appendix/a-1_visual-programming-and-dynamo.html"><strong aria-hidden="true">12.1.</strong> Visual Programming and Dynamo</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-2_resources.html"><strong aria-hidden="true">12.2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-3_packages.html"><strong aria-hidden="true">12.3.</strong> Useful Packages</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-4_example-files.html"><strong aria-hidden="true">12.4.</strong> Example Files</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-5_download-pdf.html"><strong aria-hidden="true">12.5.</strong> Download PDF</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DynamoPrimer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="nodes-and-wires"><a class="header" href="#nodes-and-wires">Nodes and Wires</a></h1>
+<h2 id="nodes"><a class="header" href="#nodes">Nodes</a></h2>
+<p>In Dynamo, <strong>Nodes</strong> are the objects you connect to form a Visual Program. Each <strong>Node</strong> performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.</p>
+<h3 id="anatomy-of-a-node"><a class="header" href="#anatomy-of-a-node">Anatomy of a Node</a></h3>
+<p>Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:</p>
+<p><img src="images/nodesandwires-nodesanatomy.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Name - The Name of the Node with a <code>Category.Name</code> naming convention</li>
+<li>Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node</li>
+<li>Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action</li>
+<li>Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.</li>
+<li>Lacing Icon - Indicates the <a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.html#lacing">Lacing option</a> specified for matching list inputs (more on that later)</li>
+</ol>
+</blockquote>
+<h3 id="nodes-inputoutput-ports"><a class="header" href="#nodes-inputoutput-ports">Nodes Input/Output Ports</a></h3>
+<p>The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.</p>
+<p>Ports expect to receive data of a certain type. For instance, connecting a number such as <em>2.75</em> to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply <em>&quot;Red&quot;</em> to the same Port it will result in an error.</p>
+<p>{% hint style=&quot;info&quot; %}
+Tip: Hover over a Port to see a tooltip containing the data type expected.
+{% endhint %}</p>
+<p><img src="images/nodesandwires-nodesinputandtooltip.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Port Label</li>
+<li>Tool Tip</li>
+<li>Data Type</li>
+<li>Default Value</li>
+</ol>
+</blockquote>
+<h3 id="node-states"><a class="header" href="#node-states">Node States</a></h3>
+<p>Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error &gt; Warning &gt; Info &gt; Preview.</p>
+<p>Hovering or right-clicking over the Name or Ports presents additional information and options.</p>
+<p><img src="../.gitbook/assets/nodesandwires-nodestates.png" alt="" /></p>
+<blockquote>
+<ol>
+<li>Satisfied inputs - A node with blue vertical bars over its input ports is well-connected and has all of its inputs successfully connected.</li>
+<li>Unsatisfied inputs – A node with a red vertical bar over one or more input ports needs to have those inputs connected.</li>
+<li>Function – A node that outputs a function and has a gray vertical bar over an output port is a function node.</li>
+<li>Selected - Currently selected nodes have an aqua highlight around their border.</li>
+<li>Frozen - A translucent blue node is frozen, suspending the execution of the node.</li>
+<li>Preview off - A gray status bar underneath the node and an eye icon <img src="images/nodesandwires-previewoff.jpg" alt="" data-size="line"> indicate that geometry preview for the node is switched off.</li>
+<li>Warning - A yellow status bar underneath the node indicates Warning state, meaning the node either lacks input data or may have incorrect data types.</li>
+<li>Error - A red status bar underneath the node indicates that the node is in an Error state.</li>
+<li>Info - Blue status bar underneath the node indicates Info state, which flags useful information about nodes. This state can be triggered when approaching a maximum value supported by the node, using a node in a way that has potential performance impacts, etc.</li>
+</ol>
+</blockquote>
+<h4 id="handling-error-or-warning-nodes"><a class="header" href="#handling-error-or-warning-nodes">Handling Error or Warning Nodes</a></h4>
+<p>If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning <img src="images/nodesandwires-nodewarningicon.png" alt="" /> or error <img src="images/nodesandwires-nodeerroricon.png" alt="" /> tooltip icon to expand it.</p>
+<p>{% hint style=&quot;info&quot; %}
+Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+{% endhint %}</p>
+<p><img src="images/nodesandwires-nodeswithwarningtooltip.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Warning Tooltip - &quot;Null&quot; or no data cannot be understood as a Double, i.e., a number</li>
+<li>Use the Watch Node to examine the input data</li>
+<li>Upstream the Number Node is storing &quot;Red,&quot; not a number</li>
+</ol>
+</blockquote>
+<h2 id="wires"><a class="header" href="#wires">Wires</a></h2>
+<p>Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.</p>
+<h3 id="program-flow"><a class="header" href="#program-flow">Program Flow <a href="#program-flow" id="program-flow"></a></a></h3>
+<p>Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the <strong>Flow of Data</strong> in the Visual Program.</p>
+<p>Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.</p>
+<p><img src="images/nodesandwires-flowofdata.jpg" alt="" /></p>
+<h3 id="creating-wires"><a class="header" href="#creating-wires">Creating Wires <a href="#creating-wires" id="creating-wires"></a></a></h3>
+<p>Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.</p>
+<p>The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.</p>
+<p><img src="images/nodesandwires-creatingawire.gif" alt="" /></p>
+<h3 id="editing-wires"><a class="header" href="#editing-wires">Editing Wires <a href="#editing-wires" id="editing-wires"></a></a></h3>
+<p>Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:</p>
+<ul>
+<li>Change connection to an input Port, left-click on another input Port</li>
+</ul>
+<p><img src="images/nodesandwires-editwirechangeport(2).gif" alt="" /></p>
+<ul>
+<li>To remove the Wire, pull the Wire away and left-click on Workspace</li>
+</ul>
+<p><img src="images/nodesandwires-editwiresremove.gif" alt="" /></p>
+<ul>
+<li>Reconnect multiple wires using Shift+left-click</li>
+</ul>
+<p><img src="images/nodesandwires-editmultiports.gif" alt="" /></p>
+<ul>
+<li>Duplicate a wire using Ctrl+left-click</li>
+</ul>
+<p><img src="images/nodesandwires-duplicatewire.gif" alt="" /></p>
+<h4 id="default-vs-highlighted-wires"><a class="header" href="#default-vs-highlighted-wires">Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a></a></h4>
+<p>By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.</p>
+<p><img src="images/nodesandwires-defaultvshighlightedwires.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Highlighted Wire</li>
+<li>Default Wire</li>
+</ol>
+</blockquote>
+<p><strong>Hide Wires by Default</strong></p>
+<p>In case you prefer to hide the Wires in your graph, you can find this option from View &gt; Connectors &gt; untick Show Connectors.</p>
+<p>With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.</p>
+<p><img src="images/nodesandwires-hidewiressetting(1).gif" alt="" /></p>
+<h4 id="hide-individual-wire-only"><a class="header" href="#hide-individual-wire-only">Hide Individual Wire Only</a></h4>
+<p>You can also hide selected wire only by Right-clicking on the Nodes output &gt; select Hide Wires</p>
+<p><img src="images/nodesandwires-hideselectedwire.gif" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3_user_interface/2-library.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../5_essential_nodes_and_concepts/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3_user_interface/2-library.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../5_essential_nodes_and_concepts/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

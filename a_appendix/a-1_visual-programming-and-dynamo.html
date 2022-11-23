@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Visual Programming and Dynamo - DynamoPrimer</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../1_introduction/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_introduction/1-what-is-dynamo.html"><strong aria-hidden="true">2.1.</strong> What is Dynamo & How Does It Work?</a></li><li class="chapter-item expanded "><a href="../1_introduction/2-primer-user-guide-dynamo-community-and-platform.html"><strong aria-hidden="true">2.2.</strong> Primer User Guide, Dynamo Community & Platform</a></li></ol></li><li class="chapter-item expanded "><a href="../2_setup_for_dynamo/index.html"><strong aria-hidden="true">3.</strong> Setup for Dynamo</a></li><li class="chapter-item expanded "><a href="../3_user_interface/index.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3_user_interface/1-workspace.html"><strong aria-hidden="true">4.1.</strong> Workspace</a></li><li class="chapter-item expanded "><a href="../3_user_interface/2-library.html"><strong aria-hidden="true">4.2.</strong> Library</a></li></ol></li><li class="chapter-item expanded "><a href="../4_nodes_and_wires/index.html"><strong aria-hidden="true">5.</strong> Nodes and Wires</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/index.html"><strong aria-hidden="true">6.</strong> Essential Nodes & Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/index-of-nodes.html"><strong aria-hidden="true">6.1.</strong> Index of Nodes</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html"><strong aria-hidden="true">6.2.</strong> Geometry for Computational Design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/1-geometry-overview.html"><strong aria-hidden="true">6.2.1.</strong> Geometry Overview</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html"><strong aria-hidden="true">6.2.2.</strong> Vector, Plane & Coordinate System</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/3-points.html"><strong aria-hidden="true">6.2.3.</strong> Points</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/4-curves.html"><strong aria-hidden="true">6.2.4.</strong> Curves</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.html"><strong aria-hidden="true">6.2.5.</strong> Surfaces</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.html"><strong aria-hidden="true">6.2.6.</strong> Solids</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/7-meshes.html"><strong aria-hidden="true">6.2.7.</strong> Meshes</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/index.html"><strong aria-hidden="true">6.3.</strong> The Building Blocks of Programs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/1-data.html"><strong aria-hidden="true">6.3.1.</strong> Data</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/2-math.html"><strong aria-hidden="true">6.3.2.</strong> Math</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/3-logic.html"><strong aria-hidden="true">6.3.3.</strong> Logic</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/4-strings.html"><strong aria-hidden="true">6.3.4.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/5-color.html"><strong aria-hidden="true">6.3.5.</strong> Color</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/index.html"><strong aria-hidden="true">6.4.</strong> Designing with Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.html"><strong aria-hidden="true">6.4.1.</strong> What's a List</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html"><strong aria-hidden="true">6.4.2.</strong> Working with Lists</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists.html"><strong aria-hidden="true">6.4.3.</strong> Lists of Lists</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html"><strong aria-hidden="true">6.4.4.</strong> n-Dimensional Lists</a></li></ol></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/index.html"><strong aria-hidden="true">6.5.</strong> Dictionaries in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/1-what-is-a-dictionary.html"><strong aria-hidden="true">6.5.1.</strong> What is a Dictionary</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/2-node-uses.html"><strong aria-hidden="true">6.5.2.</strong> Dictionary Nodes</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/3-code-block-uses.html"><strong aria-hidden="true">6.5.3.</strong> Dictionaries in Code Blocks</a></li><li class="chapter-item expanded "><a href="../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/4-dictionary-use-cases.html"><strong aria-hidden="true">6.5.4.</strong> Revit Use-Cases</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/index.html"><strong aria-hidden="true">7.</strong> Custom Nodes & Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/index.html"><strong aria-hidden="true">7.1.</strong> Custom Nodes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.html"><strong aria-hidden="true">7.1.1.</strong> Custom Node Introduction</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/2-creating.html"><strong aria-hidden="true">7.1.2.</strong> Creating a Custom Node</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-1_custom-nodes/3-library.html"><strong aria-hidden="true">7.1.3.</strong> Publishing to Your Library</a></li></ol></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/index.html"><strong aria-hidden="true">7.2.</strong> Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/1-introduction.html"><strong aria-hidden="true">7.2.1.</strong> Package Introduction</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/2-mesh-toolkit.html"><strong aria-hidden="true">7.2.2.</strong> Package Case Study - Mesh Toolkit</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/3-developing.html"><strong aria-hidden="true">7.2.3.</strong> Developing a Package</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/4-publishing.html"><strong aria-hidden="true">7.2.4.</strong> Publishing a Package</a></li><li class="chapter-item expanded "><a href="../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.html"><strong aria-hidden="true">7.2.5.</strong> Zero-Touch Importing</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/index.html"><strong aria-hidden="true">8.</strong> Dynamo for Revit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/1-the-revit-connection.html"><strong aria-hidden="true">8.1.</strong> The Revit Connection</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/2-selecting.html"><strong aria-hidden="true">8.2.</strong> Selecting</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/3-editing.html"><strong aria-hidden="true">8.3.</strong> Editing</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/4-creating.html"><strong aria-hidden="true">8.4.</strong> Creating</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/5-customizing.html"><strong aria-hidden="true">8.5.</strong> Customizing</a></li><li class="chapter-item expanded "><a href="../7_dynamo_for_revit/6-documenting.html"><strong aria-hidden="true">8.6.</strong> Documenting</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/index.html"><strong aria-hidden="true">9.</strong> Coding in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/index.html"><strong aria-hidden="true">9.1.</strong> Code Blocks and DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.html"><strong aria-hidden="true">9.1.1.</strong> What's a Code Block</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.html"><strong aria-hidden="true">9.1.2.</strong> DesignScript Syntax</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/3-shorthand.html"><strong aria-hidden="true">9.1.3.</strong> Shorthand</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-1_code-blocks-and-design-script/4-functions.html"><strong aria-hidden="true">9.1.4.</strong> Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/index.html"><strong aria-hidden="true">9.2.</strong> Geometry with DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/1-designscript-geometry-basics.html"><strong aria-hidden="true">9.2.1.</strong> DesignScript Geometry Basics</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/2-geometric-primitives.html"><strong aria-hidden="true">9.2.2.</strong> Geometric Primitives</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/3-vector-math.html"><strong aria-hidden="true">9.2.3.</strong> Vector Math</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/4-curves.html"><strong aria-hidden="true">9.2.4.</strong> Curves: Interpolated and Control Points</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/5-translation-rotation-and-other-transformations.html"><strong aria-hidden="true">9.2.5.</strong> Translation, Rotation, and Other Transformations</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/6-surfaces.html"><strong aria-hidden="true">9.2.6.</strong> Surfaces: Interpolated, Control Points, Loft, Revolve</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/7-geometric-parameterization.html"><strong aria-hidden="true">9.2.7.</strong> Geometric Parameterization</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/8-intersection-and-trim.html"><strong aria-hidden="true">9.2.8.</strong> Intersection and Trim</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/9-geometric-booleans.html"><strong aria-hidden="true">9.2.9.</strong> Geometric Booleans</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-2_geometry-with-design-script/10-python-point-generators.html"><strong aria-hidden="true">9.2.10.</strong> Python Point Generators</a></li></ol></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/index.html"><strong aria-hidden="true">9.3.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/1-python.html"><strong aria-hidden="true">9.3.1.</strong> Python Nodes</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/2-python-revit.html"><strong aria-hidden="true">9.3.2.</strong> Python and Revit</a></li><li class="chapter-item expanded "><a href="../8_coding_in_dynamo/8-3_python/3-python-templates.html"><strong aria-hidden="true">9.3.3.</strong> Setup Your Own Python Template</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../9_best_practices/index.html"><strong aria-hidden="true">10.</strong> Best Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9_best_practices/1-graph-strategies.html"><strong aria-hidden="true">10.1.</strong> Graph Strategies</a></li><li class="chapter-item expanded "><a href="../9_best_practices/2-scripting-strategies.html"><strong aria-hidden="true">10.2.</strong> Scripting Strategies</a></li><li class="chapter-item expanded "><a href="../9_best_practices/3-scripting-reference.html"><strong aria-hidden="true">10.3.</strong> Scripting Reference</a></li><li class="chapter-item expanded "><a href="../9_best_practices/4-managing-your-program.html"><strong aria-hidden="true">10.4.</strong> Managing Your Program</a></li></ol></li><li class="chapter-item expanded "><a href="../10_sample_workflow/index.html"><strong aria-hidden="true">11.</strong> Sample Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/index.html"><strong aria-hidden="true">11.1.</strong> Getting Started Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.html"><strong aria-hidden="true">11.1.1.</strong> Parametric Vase</a></li><li class="chapter-item expanded "><a href="../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.html"><strong aria-hidden="true">11.1.2.</strong> Attractor Points</a></li></ol></li><li class="chapter-item expanded "><a href="../10_sample_workflow/10-2_concept-index.html"><strong aria-hidden="true">11.2.</strong> Concept Index</a></li></ol></li><li class="chapter-item expanded "><a href="../a_appendix/index.html"><strong aria-hidden="true">12.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../a_appendix/a-1_visual-programming-and-dynamo.html" class="active"><strong aria-hidden="true">12.1.</strong> Visual Programming and Dynamo</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-2_resources.html"><strong aria-hidden="true">12.2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-3_packages.html"><strong aria-hidden="true">12.3.</strong> Useful Packages</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-4_example-files.html"><strong aria-hidden="true">12.4.</strong> Example Files</a></li><li class="chapter-item expanded "><a href="../a_appendix/a-5_download-pdf.html"><strong aria-hidden="true">12.5.</strong> Download PDF</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DynamoPrimer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="visual-programming-and-dynamo"><a class="header" href="#visual-programming-and-dynamo">Visual Programming and Dynamo</a></h1>
+<h4 id="what-is-visual-programming"><a class="header" href="#what-is-visual-programming">What is Visual Programming? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a></a></h4>
+<p>Designing frequently involves establishing visual, systemic, or geometric relationships between the parts of a design. More times than not, these relationships are developed by workflows that gets us from concept to result by way of rules. Perhaps without knowing it, we are working algorithmically - defining a step-by-step set of actions that follow a basic logic of input, processing, and output. Programming allows us to continue to work this way but by formalizing our algorithms.</p>
+<h4 id="algorithms-in-hand"><a class="header" href="#algorithms-in-hand">Algorithms in Hand <a href="#algorithms-in-hand" id="algorithms-in-hand"></a></a></h4>
+<p>While offering some powerful opportunities, the term <strong>Algorithm</strong> can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).</p>
+<p><img src="https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png" alt="Origami Crane" /></p>
+<p>So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.</p>
+<p><strong>Textual Instructions:</strong></p>
+<ol>
+<li>Start with a square piece of paper, colored side up. Fold in half and open. Then fold in half the other way.</li>
+<li>Turn the paper over to the white side. Fold the paper in half, crease well and open, and then fold again in the other direction.</li>
+<li>Using the creases you have made, Bring the top 3 corners of the model down to the bottom corner. Flatten model.</li>
+<li>Fold top triangular flaps into the center and unfold.</li>
+<li>Fold top of model downwards, crease well and unfold.</li>
+<li>Open the uppermost flap of the model, bringing it upwards and pressing the sides of the model inwards at the same time. Flatten down, creasing well.</li>
+<li>Turn model over and repeat Steps 4-6 on the other side.</li>
+<li>Fold top flaps into the center.</li>
+<li>Repeat on other side.</li>
+<li>Fold both ‘legs’ of model up, crease very well, then unfold.</li>
+<li>Inside Reverse Fold the “legs” along the creases you just made.</li>
+<li>Inside Reverse Fold one side to make a head, then fold down the wings.</li>
+<li>You now have a crane.</li>
+</ol>
+<p><strong>Graphical Instructions:</strong></p>
+<p><img src="https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png" alt="Origami Crane instructions" /></p>
+<h4 id="programming-defined"><a class="header" href="#programming-defined">Programming Defined <a href="#programming-defined" id="programming-defined"></a></a></h4>
+<p>Using either of these sets of instructions should result in a crane, and if you followed along yourself, you've applied an algorithm. The only difference is the way in which we read the formalization of that set of instructions and that leads us to <strong>Programming</strong>. Programming, frequently shortened from <em>Computer Programming</em>, is the act of formalizing the processing of a series of actions into an executable program. If we turned the above instructions for a creating crane into a format our computer can read and execute, we are Programming.</p>
+<p>The key to and first hurdle we will find in Programming, is that we have to rely on some form of abstraction to communicate effectively with our computer. That takes the form of any number of Programming Languages, such as JavaScript, Python, or C. If we can write out a repeatable set of instructions, like for the origami crane, we only need to translate it for the computer. We are on our way to having the computer be able to make a crane or even a multitude of different cranes where each one varies slightly. This is the power of Programming - the computer will repeatedly execute whatever task, or set of tasks, we assign to it, without delay and without human error.</p>
+<p><strong>Visual Programming Defined</strong></p>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../.gitbook/assets/Visual Programming - Circle Through Point.dyn&quot; %}</p>
+<p>If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?</p>
+<p>If your answer contained graphics, then <strong>Visual Programming</strong> is definitely for you. The process is essentially the same for both Programming and Visual Programming. They utilize the same framework of formalization; however, we define the instructions and relationships of our program through a graphical (or &quot;Visual&quot;) user interface. Instead of typing text bound by syntax, we connect pre-packaged nodes together. Here's a comparison of the same algorithm - &quot;draw a circle through a point&quot; - programmed with nodes versus code:</p>
+<p><strong>Visual Program:</strong></p>
+<p><img src="./images/a-1/visualProgramming(2).png" alt="" /></p>
+<p><strong>Textual Program:</strong></p>
+<pre><code>myPoint = Point.ByCoordinates(0.0,0.0,0.0);
+x = 5.6;
+y = 11.5;
+attractorPoint = Point.ByCoordinates(x,y,0.0);
+dist = myPoint.DistanceTo(attractorPoint);
+myCircle = Circle.ByCenterPointRadius(myPoint,dist);
+</code></pre>
+<p>The results of our algorithm:</p>
+<p><img src="./images/a-1/visualProgramming(1).png" alt="" /></p>
+<p>The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../a_appendix/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../a_appendix/a-2_resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../a_appendix/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../a_appendix/a-2_resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

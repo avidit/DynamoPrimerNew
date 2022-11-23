@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lists of Lists - DynamoPrimer</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../../1_introduction/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../1_introduction/1-what-is-dynamo.html"><strong aria-hidden="true">2.1.</strong> What is Dynamo & How Does It Work?</a></li><li class="chapter-item expanded "><a href="../../1_introduction/2-primer-user-guide-dynamo-community-and-platform.html"><strong aria-hidden="true">2.2.</strong> Primer User Guide, Dynamo Community & Platform</a></li></ol></li><li class="chapter-item expanded "><a href="../../2_setup_for_dynamo/index.html"><strong aria-hidden="true">3.</strong> Setup for Dynamo</a></li><li class="chapter-item expanded "><a href="../../3_user_interface/index.html"><strong aria-hidden="true">4.</strong> User Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../3_user_interface/1-workspace.html"><strong aria-hidden="true">4.1.</strong> Workspace</a></li><li class="chapter-item expanded "><a href="../../3_user_interface/2-library.html"><strong aria-hidden="true">4.2.</strong> Library</a></li></ol></li><li class="chapter-item expanded "><a href="../../4_nodes_and_wires/index.html"><strong aria-hidden="true">5.</strong> Nodes and Wires</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/index.html"><strong aria-hidden="true">6.</strong> Essential Nodes & Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/index-of-nodes.html"><strong aria-hidden="true">6.1.</strong> Index of Nodes</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/index.html"><strong aria-hidden="true">6.2.</strong> Geometry for Computational Design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/1-geometry-overview.html"><strong aria-hidden="true">6.2.1.</strong> Geometry Overview</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.html"><strong aria-hidden="true">6.2.2.</strong> Vector, Plane & Coordinate System</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/3-points.html"><strong aria-hidden="true">6.2.3.</strong> Points</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/4-curves.html"><strong aria-hidden="true">6.2.4.</strong> Curves</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.html"><strong aria-hidden="true">6.2.5.</strong> Surfaces</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.html"><strong aria-hidden="true">6.2.6.</strong> Solids</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/7-meshes.html"><strong aria-hidden="true">6.2.7.</strong> Meshes</a></li></ol></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/index.html"><strong aria-hidden="true">6.3.</strong> The Building Blocks of Programs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/1-data.html"><strong aria-hidden="true">6.3.1.</strong> Data</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/2-math.html"><strong aria-hidden="true">6.3.2.</strong> Math</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/3-logic.html"><strong aria-hidden="true">6.3.3.</strong> Logic</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/4-strings.html"><strong aria-hidden="true">6.3.4.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-3_the-building-blocks-of-programs/5-color.html"><strong aria-hidden="true">6.3.5.</strong> Color</a></li></ol></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/index.html"><strong aria-hidden="true">6.4.</strong> Designing with Lists</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.html"><strong aria-hidden="true">6.4.1.</strong> What's a List</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html"><strong aria-hidden="true">6.4.2.</strong> Working with Lists</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists.html" class="active"><strong aria-hidden="true">6.4.3.</strong> Lists of Lists</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html"><strong aria-hidden="true">6.4.4.</strong> n-Dimensional Lists</a></li></ol></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/index.html"><strong aria-hidden="true">6.5.</strong> Dictionaries in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/1-what-is-a-dictionary.html"><strong aria-hidden="true">6.5.1.</strong> What is a Dictionary</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/2-node-uses.html"><strong aria-hidden="true">6.5.2.</strong> Dictionary Nodes</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/3-code-block-uses.html"><strong aria-hidden="true">6.5.3.</strong> Dictionaries in Code Blocks</a></li><li class="chapter-item expanded "><a href="../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/4-dictionary-use-cases.html"><strong aria-hidden="true">6.5.4.</strong> Revit Use-Cases</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/index.html"><strong aria-hidden="true">7.</strong> Custom Nodes & Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/index.html"><strong aria-hidden="true">7.1.</strong> Custom Nodes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.html"><strong aria-hidden="true">7.1.1.</strong> Custom Node Introduction</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/2-creating.html"><strong aria-hidden="true">7.1.2.</strong> Creating a Custom Node</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-1_custom-nodes/3-library.html"><strong aria-hidden="true">7.1.3.</strong> Publishing to Your Library</a></li></ol></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/index.html"><strong aria-hidden="true">7.2.</strong> Packages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/1-introduction.html"><strong aria-hidden="true">7.2.1.</strong> Package Introduction</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/2-mesh-toolkit.html"><strong aria-hidden="true">7.2.2.</strong> Package Case Study - Mesh Toolkit</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/3-developing.html"><strong aria-hidden="true">7.2.3.</strong> Developing a Package</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/4-publishing.html"><strong aria-hidden="true">7.2.4.</strong> Publishing a Package</a></li><li class="chapter-item expanded "><a href="../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.html"><strong aria-hidden="true">7.2.5.</strong> Zero-Touch Importing</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/index.html"><strong aria-hidden="true">8.</strong> Dynamo for Revit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/1-the-revit-connection.html"><strong aria-hidden="true">8.1.</strong> The Revit Connection</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/2-selecting.html"><strong aria-hidden="true">8.2.</strong> Selecting</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/3-editing.html"><strong aria-hidden="true">8.3.</strong> Editing</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/4-creating.html"><strong aria-hidden="true">8.4.</strong> Creating</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/5-customizing.html"><strong aria-hidden="true">8.5.</strong> Customizing</a></li><li class="chapter-item expanded "><a href="../../7_dynamo_for_revit/6-documenting.html"><strong aria-hidden="true">8.6.</strong> Documenting</a></li></ol></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/index.html"><strong aria-hidden="true">9.</strong> Coding in Dynamo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/index.html"><strong aria-hidden="true">9.1.</strong> Code Blocks and DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.html"><strong aria-hidden="true">9.1.1.</strong> What's a Code Block</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.html"><strong aria-hidden="true">9.1.2.</strong> DesignScript Syntax</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/3-shorthand.html"><strong aria-hidden="true">9.1.3.</strong> Shorthand</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/4-functions.html"><strong aria-hidden="true">9.1.4.</strong> Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/index.html"><strong aria-hidden="true">9.2.</strong> Geometry with DesignScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/1-designscript-geometry-basics.html"><strong aria-hidden="true">9.2.1.</strong> DesignScript Geometry Basics</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/2-geometric-primitives.html"><strong aria-hidden="true">9.2.2.</strong> Geometric Primitives</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/3-vector-math.html"><strong aria-hidden="true">9.2.3.</strong> Vector Math</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/4-curves.html"><strong aria-hidden="true">9.2.4.</strong> Curves: Interpolated and Control Points</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/5-translation-rotation-and-other-transformations.html"><strong aria-hidden="true">9.2.5.</strong> Translation, Rotation, and Other Transformations</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/6-surfaces.html"><strong aria-hidden="true">9.2.6.</strong> Surfaces: Interpolated, Control Points, Loft, Revolve</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/7-geometric-parameterization.html"><strong aria-hidden="true">9.2.7.</strong> Geometric Parameterization</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/8-intersection-and-trim.html"><strong aria-hidden="true">9.2.8.</strong> Intersection and Trim</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/9-geometric-booleans.html"><strong aria-hidden="true">9.2.9.</strong> Geometric Booleans</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-2_geometry-with-design-script/10-python-point-generators.html"><strong aria-hidden="true">9.2.10.</strong> Python Point Generators</a></li></ol></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/index.html"><strong aria-hidden="true">9.3.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/1-python.html"><strong aria-hidden="true">9.3.1.</strong> Python Nodes</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/2-python-revit.html"><strong aria-hidden="true">9.3.2.</strong> Python and Revit</a></li><li class="chapter-item expanded "><a href="../../8_coding_in_dynamo/8-3_python/3-python-templates.html"><strong aria-hidden="true">9.3.3.</strong> Setup Your Own Python Template</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../9_best_practices/index.html"><strong aria-hidden="true">10.</strong> Best Practices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../9_best_practices/1-graph-strategies.html"><strong aria-hidden="true">10.1.</strong> Graph Strategies</a></li><li class="chapter-item expanded "><a href="../../9_best_practices/2-scripting-strategies.html"><strong aria-hidden="true">10.2.</strong> Scripting Strategies</a></li><li class="chapter-item expanded "><a href="../../9_best_practices/3-scripting-reference.html"><strong aria-hidden="true">10.3.</strong> Scripting Reference</a></li><li class="chapter-item expanded "><a href="../../9_best_practices/4-managing-your-program.html"><strong aria-hidden="true">10.4.</strong> Managing Your Program</a></li></ol></li><li class="chapter-item expanded "><a href="../../10_sample_workflow/index.html"><strong aria-hidden="true">11.</strong> Sample Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-1_getting-started-workflows/index.html"><strong aria-hidden="true">11.1.</strong> Getting Started Workflows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.html"><strong aria-hidden="true">11.1.1.</strong> Parametric Vase</a></li><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.html"><strong aria-hidden="true">11.1.2.</strong> Attractor Points</a></li></ol></li><li class="chapter-item expanded "><a href="../../10_sample_workflow/10-2_concept-index.html"><strong aria-hidden="true">11.2.</strong> Concept Index</a></li></ol></li><li class="chapter-item expanded "><a href="../../a_appendix/index.html"><strong aria-hidden="true">12.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../a_appendix/a-1_visual-programming-and-dynamo.html"><strong aria-hidden="true">12.1.</strong> Visual Programming and Dynamo</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-2_resources.html"><strong aria-hidden="true">12.2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-3_packages.html"><strong aria-hidden="true">12.3.</strong> Useful Packages</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-4_example-files.html"><strong aria-hidden="true">12.4.</strong> Example Files</a></li><li class="chapter-item expanded "><a href="../../a_appendix/a-5_download-pdf.html"><strong aria-hidden="true">12.5.</strong> Download PDF</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DynamoPrimer</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="lists-of-lists"><a class="header" href="#lists-of-lists">Lists of Lists</a></h1>
+<h3 id="lists-of-lists-1"><a class="header" href="#lists-of-lists-1">Lists of Lists</a></h3>
+<p>Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.</p>
+<p><img src="../images/5-4/3/coins-521245_640.jpg" alt="Coins" /></p>
+<blockquote>
+<p>Photo by <a href="https://commons.wikimedia.org/wiki/File:Stack_of_coins_0214.jpg">Dori</a>.</p>
+</blockquote>
+<h3 id="query"><a class="header" href="#query">Query</a></h3>
+<p>What <strong>queries</strong> can we make from the list of lists? This accesses existing properties.</p>
+<ul>
+<li>Number of coin types? 2.</li>
+<li>Coin type values? $0.01 and $0.25.</li>
+<li>Material of quarters? 75% copper and 25% nickel.</li>
+<li>Material of pennies? 97.5% zinc and 2.5% copper.</li>
+</ul>
+<h3 id="action"><a class="header" href="#action">Action</a></h3>
+<p>What <strong>actions</strong> can we perform on the list of lists? This changes the list of lists based on a given operation.</p>
+<ul>
+<li>Select a specific stack of quarters or pennies.</li>
+<li>Select a specific quarter or penny.</li>
+<li>Rearrange the stacks of quarters and pennies.</li>
+<li>Shuffle the stacks together.</li>
+</ul>
+<p>Again, Dynamo has an analogous node for each one of the operations above. Since we're working with abstract data and not physical objects, we need a set of rules to govern how we move up and down the data hierarchy.</p>
+<p>When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.</p>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<h3 id="top-down-hierarchy"><a class="header" href="#top-down-hierarchy">Top-Down Hierarchy</a></h3>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/Top-Down-Hierarchy.dyn&quot; %}</p>
+<p>The fundamental concept to learn from this section: <strong>Dynamo treats lists as objects in and of themselves</strong>. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like <strong>List.GetItemAtIndex</strong>, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:</p>
+<p><img src="../images/5-4/3/listsoflists-topdownhierachy.jpg" alt="top-down" /></p>
+<blockquote>
+<ol>
+<li>With <strong>Code Block</strong>, we've defined two ranges: <code>0..2; 0..3;</code></li>
+<li>These ranges are connected to a <strong>Point.ByCoordinates</strong> node with lacing set to <em>&quot;Cross Product&quot;</em>. This creates a grid of points, and also returns a list of lists as an output.</li>
+<li>Notice that the <strong>Watch</strong> node gives 3 lists with 4 items in each list.</li>
+<li>When using <strong>List.GetItemAtIndex</strong>, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.</li>
+</ol>
+</blockquote>
+<h3 id="listflatten"><a class="header" href="#listflatten">List.Flatten</a></h3>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/Flatten.dyn&quot; %}</p>
+<p>Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.</p>
+<p><img src="../images/5-4/3/listsoflists-flatten01.jpg" alt="Exercise" /></p>
+<blockquote>
+<ol>
+<li>Insert one line of code to define a range in <strong>Code Block</strong>: <code>-250..-150..#4;</code></li>
+<li>Plugging the <em>code block</em> into the <em>x</em> and <em>y</em> input of a <strong>Point.ByCoordinates</strong> node, we set the lacing to <em>&quot;Cross Product&quot;</em> to get a grid of points.</li>
+<li>The <strong>Watch</strong> node shows that we have a list of lists.</li>
+<li>A <strong>PolyCurve.ByPoints</strong> node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.</li>
+</ol>
+</blockquote>
+<p><img src="../images/5-4/3/listsoflists-flatten02.jpg" alt="Exercise" /></p>
+<blockquote>
+<ol>
+<li>By inserting a <em>flatten</em> before the polycurve node, we've created one single list for all of the points. The <strong>PolyCurve.ByPoints</strong> node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.</li>
+</ol>
+</blockquote>
+<p>There are also options for flattening isolated tiers of data. Using the <strong>List.Flatten</strong> node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in <strong>List.Map</strong>. We'll discuss more about <strong>List.Map</strong> below.</p>
+<h3 id="chop"><a class="header" href="#chop">Chop</a></h3>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/Chop.dyn&quot; %}</p>
+<p>When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.</p>
+<p>The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.</p>
+<p><img src="../images/5-4/3/listsoflists-chop.jpg" alt="Exercise" /></p>
+<h3 id="listmap"><a class="header" href="#listmap">List.Map</a></h3>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/Map.dyn&quot; %}</p>
+<p>A <strong>List.Map/Combine</strong> applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.</p>
+<p><em>Note: This exercise was created with a previous version of Dynamo. Much of the</em> <strong>List.Map</strong> <em>functionality has been resolved with the addition of the</em> <strong>List@Level</strong> <em>feature. For more information, see</em> <a href="6-3_lists-of-lists.html#listlevel"><em>List@Level</em></a> <em>below.</em></p>
+<p>As a quick introduction, let's review the <strong>List.Count</strong> node from a previous section.</p>
+<p>The <strong>List.Count</strong> node counts all of the items in a list. We'll use this to demonstrate how <strong>List.Map</strong> works.</p>
+<p><img src="../images/5-4/3/listsoflists-map01.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>
+<p>Insert two lines of code into the <strong>Code Block</strong>: <code>-50..50..#Nx; -50..50..#Ny;</code></p>
+<p>After typing in this code, the code block will create two inputs for Nx and Ny.</p>
+</li>
+<li>
+<p>With two <em>integer sliders</em>, define the <em>Nx</em> and <em>Ny</em> values by connecting them to the <strong>Code Block</strong>.</p>
+</li>
+<li>
+<p>Connect each line of the code block into the respective <em>X</em> and <em>Y</em> inputs of a <strong>Point.ByCoordinates</strong> node. Right click the node, select &quot;Lacing&quot;, and choose <em>&quot;Cross Product&quot;</em>. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.</p>
+</li>
+<li>
+<p>A <em><strong>Watch</strong></em> node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.</p>
+</li>
+</ol>
+</blockquote>
+<p><img src="../images/5-4/3/listsoflists-map02(1).jpg" alt="Exercise" /></p>
+<blockquote>
+<ol>
+<li>Attach a <strong>List.Count</strong> node to the output of the watch node from the previous step.</li>
+<li>Connect a <strong>Watch</strong> node to the <strong>List.Count</strong> output.</li>
+</ol>
+</blockquote>
+<p>Notice that the List.Count node gives a value of 5. This is equal to the &quot;Nx&quot; variable as defined in the code block. Why is this?</p>
+<ul>
+<li>First, the <strong>Point.ByCoordinates</strong> node uses the &quot;x&quot; input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.</li>
+<li>Since Dynamo treats lists as objects in and of themselves, a <strong>List.Count</strong> node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.</li>
+</ul>
+<p><img src="../images/5-4/3/listsoflists-map03.jpg" alt="Exercise" /></p>
+<blockquote>
+<ol>
+<li>By using a <strong>List.Map</strong> node, we take a step down in the hierarchy and perform a <em>&quot;function&quot;</em> at this level.</li>
+<li>Notice that the <strong>List.Count</strong> node has no input. It is being used as a function, so the <strong>List.Count</strong> node will be applied to every individual list one step down in the hierarchy. The blank input of <strong>List.Count</strong> corresponds to the list input of <strong>List.Map</strong>.</li>
+<li>The results of <strong>List.Count</strong> now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.</li>
+</ol>
+</blockquote>
+<h3 id="listcombine"><a class="header" href="#listcombine"><strong>List.Combine</strong></a></h3>
+<p><em>Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the</em> <strong>List@Level</strong> <em>feature. For more information, see</em> <a href="6-3_lists-of-lists.html#listlevel"><em>List@Level</em></a> <em>below.</em></p>
+<p>In this exercise, we will use <strong>List.Combine</strong> to demonstrate how it can be used to apply a function across separate lists of objects.</p>
+<p>Start by setting up two lists of points.</p>
+<p><img src="../images/5-4/3/listsoflists-combined01.jpg" alt="Exercise" /></p>
+<blockquote>
+<ol>
+<li>Use <strong>Sequence</strong> node to generate 10 values, each with a 10 step increment.</li>
+<li>Connect the result to the x input of a <strong>Point.ByCoordinates</strong> node. This will create a list of points in Dynamo.</li>
+<li>Add a second <strong>Point.ByCoordinates</strong> node to the workspace, use the same <strong>Sequence</strong> output as its x input, but use an <strong>Interger Slider</strong> as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.</li>
+</ol>
+</blockquote>
+<p>Next, we will use <strong>List.Combine</strong> to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.</p>
+<p><img src="../images/5-4/3/listsoflists-combined02.jpg" alt="Exercise" /></p>
+<blockquote>
+<ol>
+<li>Add <strong>List.Combine</strong> to the workspace and connect the 2 set of points as its list0 &amp; list1 input.</li>
+<li>Use a <strong>Line.ByStartPointEndPoint</strong> as the input function for <strong>List.Combine</strong>.</li>
+</ol>
+</blockquote>
+<p>Once completed, the 2 set of points are zipped/paired together through a <strong>Line.ByStartPointEndPoint</strong> function and returning 10 lines in Dynamo.</p>
+<p>{% hint style=&quot;info&quot; %}
+Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
+{% endhint %}</p>
+<h3 id="listlevel"><a class="header" href="#listlevel">List@Level</a></h3>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/Listatlevel.dyn&quot; %}</p>
+<p>Preferred to <strong>List.Map</strong>, the <strong>List@Level</strong> feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.</p>
+<p>In this exercise, we will use the <strong>List@Level</strong> feature to isolate a specific level of data.</p>
+<p><img src="../images/5-4/3/listsoflists-listatlevel01.jpg" alt="List@Level" /></p>
+<p>We will start with a simple 3D grid of points.</p>
+<blockquote>
+<ol>
+<li>The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.</li>
+<li>These tiers exist at different <strong>Levels</strong>. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.</li>
+<li>The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.</li>
+</ol>
+</blockquote>
+<p><img src="../images/5-4/3/listsoflists-listatlevel02.jpg" alt="List@Level" /></p>
+<blockquote>
+<ol>
+<li>To use the <strong>List@Level</strong> function, click '&gt;'. Inside this menu, you will see two checkboxes.</li>
+<li><strong>Use Levels</strong> - This enables the <strong>List@Level</strong> functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.</li>
+<li><em>Keep list structure</em> – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.</li>
+</ol>
+</blockquote>
+<p>With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.</p>
+<p><img src="../images/5-4/3/listsoflists-listatlevel03.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>“@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.</li>
+<li>If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.</li>
+<li>If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.</li>
+<li>If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.</li>
+</ol>
+</blockquote>
+<p>Although this particular example can also be created with <strong>List.Map</strong>, <strong>List@Level</strong> greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a <strong>List.Map</strong> and <strong>List@Level</strong> methods:</p>
+<p><img src="../images/5-4/3/listsoflists-listatlevel04.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Although both methods will give us access to the same points, the <strong>List@Level</strong> method allows us to easily toggle between layers of data within a single node.</li>
+<li>To access a point grid with <strong>List.Map</strong>, we will need a <strong>List.GetItemAtIndex</strong> node alongside the <strong>List.Map</strong>. For every list level that we are stepping down, we will need to use an additional <strong>List.Map</strong> node. Depending on the complexity of your lists, this could require you to add a significant amount of <strong>List.Map</strong> Nodes to your graph to access the right level of information.</li>
+<li>In this example, a <strong>List.GetItemAtIndex</strong> node with a <strong>List.Map</strong> node returns the same set of points with the same list structure as the <strong>List.GetItemAtIndex</strong> with '@L3' selected.</li>
+</ol>
+</blockquote>
+<h3 id="transpose"><a class="header" href="#transpose">Transpose</a></h3>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/Transpose.dyn&quot; %}</p>
+<p>Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.</p>
+<p><img src="../images/5-4/3/transpose1.jpg" alt="Transpose" /></p>
+<p>Let's delete the <strong>List.Count</strong> nodes from the previous exercise and move on to some geometry to see how the data structured.</p>
+<p><img src="../images/5-4/3/listsoflists-transpose01.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Connect a <strong>PolyCurve.ByPoints</strong> to the output of the watch node from <strong>Point.ByCoordinates</strong>.</li>
+<li>The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.</li>
+</ol>
+</blockquote>
+<p><img src="../images/5-4/3/listsoflists-transpose02.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>A <strong>List.Transpose</strong> node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.</li>
+<li>Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.</li>
+<li>Notice the geometric result: using <strong>PolyCurve.ByPoints</strong>, we get 3 polycurves in the perpendicular direction to the original curves.</li>
+</ol>
+</blockquote>
+<h2 id="code-block-for-list-creation"><a class="header" href="#code-block-for-list-creation">Code Block for List Creation</a></h2>
+<p>Code block shorthand uses &quot;[]&quot; to define a list. This is a much faster and more fluid way to create list than the <strong>List.Create</strong> node. <strong>Code block</strong> is discussed in more detail in <a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/">Code Blocks and DesignScript</a>. Reference the image below to note how a list with multiple expressions can be defined with code block.</p>
+<p><img src="../images/5-4/3/listsoflists-codeblockforlistcreation01.jpg" alt="" /></p>
+<h4 id="code-block-query"><a class="header" href="#code-block-query">Code Block Query</a></h4>
+<p><strong>Code block</strong> shorthand uses &quot;[]&quot; as a quick and easy way to select specific items that you want from a complex data structure. <strong>Code blocks</strong> are discussed in more detail in <a href="../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/">Code Block and DesignScript chapter</a>. Reference the image below to note how a list with multiple data types can be queried with code block.</p>
+<p><img src="../images/5-4/3/listsoflists-codeblockforlistcreation02.jpg" alt="" /></p>
+<h2 id="exercise---querying-and-inserting-data"><a class="header" href="#exercise---querying-and-inserting-data">Exercise - Querying and Inserting Data</a></h2>
+<blockquote>
+<p>Download the example file by clicking on the link below.</p>
+<p>A full list of example files can be found in the Appendix.</p>
+</blockquote>
+<p>{% file src=&quot;../datasets/5-4/3/ReplaceItems.dyn&quot; %}</p>
+<p>This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.</p>
+<p>Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.</p>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query01.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Using <strong>Code Block</strong>, insert these two lines of code and connect to the <em>u</em> and <em>v</em> inputs of <strong>Surface.PointAtParameter</strong>, respectively: <code>-50..50..#3;</code> <code>-50..50..#5;</code></li>
+<li>Be sure to set the Lacing of <strong>Surface.PointAtParameter</strong> to <em>&quot;Cross Product&quot;</em>.</li>
+<li>The <strong>Watch</strong> node show that we have a list of 3 lists, each with 5 items.</li>
+</ol>
+</blockquote>
+<p>In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?</p>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query02.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.</li>
+<li>Using <strong>Code Block</strong>, we'll write a basic line of code for querying a list of lists:<br />
+<code>points[1][2];</code></li>
+<li>Using <strong>Geometry.Translate</strong>, we'll move the selected point up in the <em>Z</em> direction by <em>20</em> units.</li>
+</ol>
+</blockquote>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query03.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Let's also select the middle row of points with a <strong>List.GetItemAtIndex</strong> node. Note: Similar to a previous step, we can also query the list with <strong>Code Block</strong>, using a line of <code>points[1];</code></li>
+</ol>
+</blockquote>
+<p>So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.</p>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query04.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>First, we want to replace the item of the list we isolated in a previous step.</li>
+<li>Using <strong>List.ReplaceItemAtIndex</strong>, we'll replace the middle item by using and index of <em>&quot;2&quot;</em>, with the replacement item connected to the moved point (<strong>Geometry.Translate</strong>).</li>
+<li>The output shows that we've input the moved point into the middle item of the list.</li>
+</ol>
+</blockquote>
+<p>Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.</p>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query05.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Following the same logic, use <strong>List.ReplaceItemAtIndex</strong> to replace the middle list with the our modified list.</li>
+<li>Notice that the <strong>Code Block</strong><em>s</em> defining the index for these two nodes are 1 and 2, which matches the original query from the <strong>Code Block</strong> (<em>points[1][2]</em>).</li>
+<li>By selecting the list at <em>index 1</em>, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.</li>
+</ol>
+</blockquote>
+<p>There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.</p>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query06.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Create a <strong>NurbsCurve.ByPoints</strong> node and connect the new data structure to create three nurbs curves.</li>
+</ol>
+</blockquote>
+<p><img src="../images/5-4/3/listoflists-exercisecbinsert&amp;query07.jpg" alt="" /></p>
+<blockquote>
+<ol>
+<li>Connect a <strong>Surface.ByLoft</strong> to the output from <strong>NurbsCurve.ByPoints</strong>. We now have a modified surface. We can change the original <em>Z</em> value of Geometry. Translate and watch the geometry update!</li>
+</ol>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../5_essential_nodes_and_concepts/5-4_designing-with-lists/4-n-dimensional-lists.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
